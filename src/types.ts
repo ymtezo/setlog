@@ -1,4 +1,4 @@
-export type MemberSize = 2 | 3 | 4 | 5;
+export type MemberSize = 2 | 3 | 4 | 20;
 
 export interface Profile {
   id: string;

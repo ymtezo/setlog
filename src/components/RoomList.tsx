@@ -48,7 +48,7 @@ export function RoomList({ me, rooms, onSelect, onCreateClick, onJoinClick }: Ro
               <div className="flex items-center gap-1 text-sm text-slate-600">
                 <Users size={16} />
                 <span>{room.members.length}</span>
-                <span className="text-slate-400">/{room.maxMembers === 5 ? '20' : room.maxMembers}</span>
+                <span className="text-slate-400">/{room.maxMembers}</span>
               </div>
             </button>
           ))

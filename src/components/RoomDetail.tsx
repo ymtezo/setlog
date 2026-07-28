@@ -107,7 +107,7 @@ export function RoomDetail({
             <div>
               <h1 className="font-bold text-slate-800 leading-tight">{room.name}</h1>
               <p className="text-[10px] text-slate-500">
-                コード {room.code} · {room.members.length}/{room.maxMembers === 5 ? '20' : room.maxMembers}人
+                コード {room.code} · {room.members.length}/{room.maxMembers}人
               </p>
             </div>
           </div>

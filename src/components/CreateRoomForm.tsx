@@ -10,12 +10,12 @@ const SIZE_LABELS: Record<MemberSize, string> = {
   2: '2人',
   3: '3人',
   4: '4人',
-  5: '5〜20人',
+  20: '5〜20人',
 };
 
 export function CreateRoomForm({ onCreate, onCancel }: CreateRoomFormProps) {
   const [name, setName] = useState('');
-  const [size, setSize] = useState<MemberSize>(5);
+  const [size, setSize] = useState<MemberSize>(20);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -42,7 +42,7 @@ export function CreateRoomForm({ onCreate, onCancel }: CreateRoomFormProps) {
       <div>
         <label className="block text-sm font-medium text-slate-700 mb-1.5">人数</label>
         <div className="grid grid-cols-4 gap-2">
-          {([2, 3, 4, 5] as MemberSize[]).map((s) => (
+          {([2, 3, 4, 20] as MemberSize[]).map((s) => (
             <button
               key={s}
               type="button"
