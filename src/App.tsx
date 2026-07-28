@@ -17,7 +17,18 @@ const JOIN_ERROR: Record<string, string> = {
 };
 
 function App() {
-  const { state, setMe, createRoom, joinRoom } = useSetlog();
+  const {
+    state,
+    setMe,
+    createRoom,
+    joinRoom,
+    toggleLock,
+    toggleLayout,
+    addLog,
+    addZip,
+    addComment,
+    addReaction,
+  } = useSetlog();
   const [view, setView] = useState<View>('list');
   const [selectedRoomId, setSelectedRoomId] = useState<string | null>(null);
   const [joinError, setJoinError] = useState<string>();
@@ -73,10 +84,19 @@ function App() {
       return (
         <RoomDetail
           room={room}
+          me={state.me}
           onBack={() => {
             setSelectedRoomId(null);
             setView('list');
           }}
+          onToggleLock={() => toggleLock(room.id)}
+          onToggleLayout={() => toggleLayout(room.id)}
+          onAddLog={(imageUrl, caption, orientation) =>
+            addLog(room.id, imageUrl, caption, orientation)
+          }
+          onAddZip={(imageUrl, text) => addZip(room.id, imageUrl, text)}
+          onAddComment={(postId, text) => addComment(room.id, postId, text)}
+          onAddReaction={(postId, emoji) => addReaction(room.id, postId, emoji)}
         />
       );
     }
