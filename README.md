@@ -1,3 +1,9 @@
+> [!IMPORTANT]
+> ### 📦 このリポジトリは統合・移行されました
+> 本リポジトリの機能プロンプトおよびソースコードは、統合スイート **[personal-journal-suite](https://github.com/ymtezo/personal-journal-suite/tree/main/packages/setlog)** へ集約されました。  
+> 今後の閲覧・保守・開発は **[personal-journal-suite](https://github.com/ymtezo/personal-journal-suite/tree/main/packages/setlog)** をご参照ください。
+
+---
 # setlog
 
 Web版 Setlog — 親しい友人との「同じ1日、それぞれの瞬間」を共有する SNS アプリのプロトタイプ。
